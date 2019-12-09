@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="UTF-8">
+
+		<title>ZCSS</title>
+
+		<script id="sap-ui-bootstrap"
+			src="../../resources/sap-ui-core.js"
+			data-sap-ui-libs="sap.m, sap.ui.commons"
+			data-sap-ui-theme="sap_belize"
+			data-sap-ui-compatVersion="edge"
+			data-sap-ui-resourceroots='{"ZCSS": ""}'>
+		</script>
+
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		
+		<style type="text/css">
+			/*#buttonId {*/
+			/*    color: green, font-family: Arial;*/
+			/*    font-size: 14px;*/
+			/*    background-color: pink;*/
+			/*    width: 300px;*/
+			/*    height: 70px;*/
+			/*}*/
+		</style>
+
+		<script>
+			// sap.ui.getCore().attachInit(function() {
+			// 	new sap.m.Shell({
+			// 		app: new sap.ui.core.ComponentContainer({
+			// 			height : "100%",
+			// 			name : "ZCSS"
+			// 		})
+			// 	}).placeAt("content");
+			// });
+
+			// var button = new sap.m.Button("buttonId", {
+			// 	text: "Press Me!!!",
+			// 	helpId: "Press Me",
+			// 	press: function() {
+			// 		alert("Button has been pressed.")
+			// 	}
+	
+			// });
+			// button.addStyleClass("myButton");
+			//button.placeAt("content");
+			
+
+			var oTextField = new sap.ui.commons.TextField({
+				valueState: sap.ui.core.ValueState.Error
+			}).placeAt("content");
+			var sHtml = "The rating specifies the trustworthiness of the account.You can choose between the following values:<br>";
+			sHtml += "<ul>";
+			sHtml += "<li><strong>A:</strong>Highly trustworthy</li>";
+			sHtml += "<li><strong>B:</strong>In generel trustworthy but some weak moments</li>";
+			sHtml += "</ul>";
+			var oRttTextField = new sap.ui.commons.RichTooltip({
+				text: sHtml
+			});
+			oTextField.setTooltip(oRttTextField);
+			
+			// new sap.ui.layout.Grid({
+   //                 content: [oTextField]
+   //         }).placeAt("content");
+		
+		</script>
+	</head>
+
+	<body class="sapUiBody" role="application">
+        <div id="content"></div>
+    </body>
+
+</html>

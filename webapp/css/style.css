@@ -1,0 +1,14 @@
+/* Enter your custom styles here */
+
+/*#buttonId {*/
+/*    color: green, font-family: Arial;*/
+/*    font-size: 14px;*/
+/*    background-color: pink;*/
+/*    width: 300px;*/
+/*    height: 70px;*/
+/*}*/
+
+.myButton {
+    width: 300px;
+    height: 70px;
+}
